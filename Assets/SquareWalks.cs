@@ -124,15 +124,11 @@ public class SquareWalks : MonoBehaviour {
 			}
 			break;
 		case godMode.PASSABLE:
-			Tile temp = tiles[tileIndex(hitPos)];
-			temp.state = TileState.PASSABLE;
-			tiles[tileIndex(hitPos)] = temp;
+			tiles[tileIndex(hitPos)].setState(TileState.PASSABLE);
 			drawTile(hitPos, passCol, true);
 			break;
 		case godMode.IMPASSABLE:
-			Tile temp1 = tiles[tileIndex(hitPos)];
-			temp1.state = TileState.IMPASSABLE;
-			tiles[tileIndex(hitPos)] = temp1;
+			tiles[tileIndex(hitPos)].setState(TileState.IMPASSABLE);
 			drawTile(hitPos, impassCol, true);
 			break;
 		}

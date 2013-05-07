@@ -69,6 +69,10 @@ public struct Tile{
 		this.height = height;
 		this.pathingCost = pathingCost;
 	}
+
+    public void setState(TileState newState){
+        state = newState;
+    }
 }
 
 public enum TileState{
